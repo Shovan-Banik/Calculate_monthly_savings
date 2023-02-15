@@ -5,8 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Monthly Savings</title>
+    <script src="https://kit.fontawesome.com/64933bad4b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    
+    <header class="mt-5">
+        <h1 class="text-emerald-500 text-7xl text-center font-semibold">Money Master<i class="fa-solid fa-sack-dollar text-black"></i></h1>
+    </header>
+    <main>
+        <section class="mt-12">
+            <div class="md:w-10/12 md:grid grid-cols-2 md:mx-auto gap-5">
+                <div>
+                    <img class="md:h-full sm:h-1/2" src="images/pic.jpg" alt="">
+                </div>
+                <div class="text-center bg-black pt-5 text-white">
+                    <div>
+                        <h2 class="text-3xl">Income</h2>
+                        <p class="my-2">Income:  <span class="pl-1"><input type="text" name="" id="income" placeholder="Your income" class="text-black pl-2"></span></p>
+                    </div>
+                    <!-- expense section -->
+                    <div class="mt-2">
+                        <h2 class="text-3xl mb-5">Expenses</h2>
+                        <p class="my-2">Food:<span class="pl-3"><input class="ml-3 text-black pl-2" type="text" name="" id="food" placeholder="Cost of food"></span></p>
+                        <p class="my-2">Rent:<span class="pl-3"><input class="ml-4 text-black pl-2" type="text" name="" id="rent" placeholder="Cost of Rent"></span></p>
+                        <p class="my-2">Clothes:<span class="pl-2"><input class="text-black pl-2" type="text" name="" id="cloth" placeholder="Cost of clothes"></span></p>
+                        <button id="calculate" class="bg-blue-800 hover:bg-pink-500 mt-5 p-2 rounded">Calculate</button>
+                    </div>
+                    <!-- total expense section -->
+                    <div class="my-5">
+                        <h2 class="text-3xl">Total Expenses: $<span id="total-expense">00</span></h2>
+                        <h2 class="text-3xl mt-2">Balance: $<span id="remaining-balance">00</span></h2>
+                    </div>
+                    <!-- savings -->
+                    <div>
+                        <p>Save: <span class="mr-2"><input class="text-black pl-2" type="text" name="" id="save-percent"></span>% <span class="ml-2"><button id="save" class="bg-blue-800 hover:bg-pink-500 mt-5 p-1 rounded w-20">Save</button></span></p>
+                    </div>
+                    <!-- saving total amount -->
+                    <div class="my-5 pb-5">
+                        <h2 class="text-3xl">Saving Amount: $<span id="saving-amount">00</span></h2>
+                        <h2 class="text-3xl mt-2">Remaining Balance: $<span id="Lastly-remaining">00</span></h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/calculate.js"></script>
 </body>
 </html>
